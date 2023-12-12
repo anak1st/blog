@@ -7,13 +7,14 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           # If your repository depends on submodule, please see: https://github.com/actions/checkout
           submodules: recursive
+      - uses: docker://pandoc/core:2.9
       - name: Use Node.js 20.x
         uses: actions/setup-node@v2
         with:
@@ -25,6 +26,13 @@ jobs:
           key: ${{ runner.OS }}-npm-cache
           restore-keys: |
             ${{ runner.OS }}-npm-cache
+
+      - name: Install Pandoc
+        run: |
+          wget -c https://github.com/jgm/pandoc/releases/download/3.1.9/pandoc-3.1.9-1-amd64.deb
+          sudo dpkg -i pandoc-3.1.9-1-amd64.deb
+          pandoc --version
+      
       - name: Install Dependencies
         run: npm install
       - name: Build
