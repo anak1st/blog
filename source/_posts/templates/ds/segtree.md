@@ -25,7 +25,8 @@ highlight_shrink:
 aside:
 abcjs:
 ---
-
+# 线段树
+线段树（Segment Tree）是一种用于解决区间查询问题的数据结构。它可以高效地执行区间修改和查询操作。
 ``` C++
 struct Info {
     i64 sum, min, max;

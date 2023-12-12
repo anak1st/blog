@@ -25,7 +25,8 @@ highlight_shrink:
 aside:
 abcjs:
 ---
-
+# 带有懒标记的线段树
+带有懒标记的线段树（Segment Tree Lazy）是一种对线段树进行扩展的数据结构，用于处理区间修改操作的延迟更新。
 ``` C++
 struct Info {
     i64 sum, min, max;

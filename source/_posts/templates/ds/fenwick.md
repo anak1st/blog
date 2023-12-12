@@ -25,7 +25,8 @@ highlight_shrink:
 aside:
 abcjs:
 ---
-
+# 树状数组
+树状数组（Fenwick Tree），也称为二进制索引树（Binary Indexed Tree），是一种用于高效处理动态数组前缀和查询及单点更新的数据结构。
 ``` C++
 template <typename T>
 struct Fenwick {
