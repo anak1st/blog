@@ -1,37 +1,38 @@
 ---
 title: Mod Integer
 date: 2023-03-10 16:18:12
+updated: 2023-03-10 16:18:12
+tags:
 categories:
-- [templates, number theory]
+- [templates, math]
+description: 自动取模
 ---
 
+# 自动取模
+
+# Code
+
 ``` C++
-template <typename T> T power(T a, i64 b) {
+template <typename T>
+T power(T a, i64 b) {
     T res = 1;
     for (; b; b /= 2, a *= a) {
-        if (b % 2) {
-            res *= a;
-        }
+        if (b % 2) res *= a;
     }
     return res;
 }
-template <i64 P> struct MintBase {
-    i64 v;
-    i64 norm(i64 x) const {
-        x %= P;
-        if (x < 0) {
-            x += P;
-        }
+template <int P>
+struct MintBase {
+    int v;
+    int norm(int x) const {
+        if (x >= P) x -= P;
+        if (x < 0) x += P;
         return x;
     }
     MintBase() : v{0} {}
-    MintBase(i64 x) : v{norm(x)} {}
-    i64 val() const {
-        return v;
-    }
-    MintBase operator-() const {
-        return MintBase(norm(P - v));
-    }
+    MintBase(i64 x) : v{norm(x % P)} {}
+    int val() const { return v; }
+    MintBase operator-() const { return MintBase(norm(P - v)); }
     MintBase inv() const {
         assert(v != 0);
         return power(*this, P - 2);
@@ -45,11 +46,11 @@ template <i64 P> struct MintBase {
         return *this;
     }
     MintBase &operator*=(const MintBase &rhs) {
-        v = norm(v * rhs.v);
+        v = norm(1LL * v * rhs.v % P);
         return *this;
     }
-    MintBase &operator/=(const MintBase &rhs) {
-        return *this *= rhs.inv();
+    MintBase &operator/=(const MintBase &rhs) { 
+        return *this *= rhs.inv(); 
     }
     friend MintBase operator+(const MintBase &lhs, const MintBase &rhs) {
         MintBase res = lhs;
@@ -84,7 +85,6 @@ template <i64 P> struct MintBase {
         return lhs.val() == rhs.val();
     }
 };
-// constexpr i64 P = 1e9 + 7;
+// constexpr int P = 998244353;
 // using Mint = MintBase<P>;
-
 ```

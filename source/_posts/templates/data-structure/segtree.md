@@ -1,32 +1,16 @@
 ---
-title: Segment Tree (Lazy)
+title: Segment Tree
 date: 2023-03-10 16:18:12
 updated: 2023-03-10 16:18:12
-tags: [range quary, range update]
+tags: [range quary, single point update]
 categories:
 - [templates, data structure]
-keywords:
-description: 带有懒标记的线段树（Segment Tree Lazy）是一种对线段树进行扩展的数据结构，用于处理区间修改操作的延迟更新。
-top_img:
-comments:
-cover:
-toc:
-toc_number:
-toc_style_simple:
-copyright:
-copyright_author:
-copyright_author_href:
-copyright_url:
-copyright_info:
-mathjax:
-katex:
-aplayer:
-highlight_shrink:
-aside:
-abcjs:
+description: 线段树（Segment Tree）是一种用于解决区间查询问题的数据结构。它可以高效地执行区间修改和查询操作。
 ---
-# 带有懒标记的线段树
-带有懒标记的线段树（Segment Tree Lazy）是一种对线段树进行扩展的数据结构，用于处理区间修改操作的延迟更新。
+# 线段树
+线段树（Segment Tree）是一种用于解决区间查询问题的数据结构。它可以高效地执行区间修改和查询操作。
+
+# Code
 ``` C++
 struct Info {
     i64 sum, min, max;

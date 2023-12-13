@@ -1,11 +1,21 @@
 ---
 title: String Hash
 date: 2023-03-10 16:18:12
+updated: 2023-03-10 16:18:12
+tags:
 categories:
-- [templates, number theory]
+- [templates, string]
+description: An impl of String Hash
 ---
 
+# #includes
+- [templates/Math/Number/Mint.hpp](/templates/math/mint/)
+
+# Code
+
 ``` C++
+#include "templates/Math/Number/Mint.hpp"
+
 constexpr i64 Mod1 = 1e9 + 7, Mod2 = 1e9 + 9;
 struct Hash {
     MintBase<Mod1> m1;
@@ -48,5 +58,12 @@ std::vector<Hash> get(std::string s) {
         res[i + 1] = res[i] * Base + Hash(s[i], s[i]);
     }
     return res;
+}
+void example() {
+    std::string s;
+    auto h = get(s);
+    auto sub = [&](int l, int r) -> Hash {
+        return h[r] - h[l] * PW[r - l];
+    };
 }
 ```

@@ -5,28 +5,12 @@ updated: 2023-03-10 16:18:12
 tags: [range quary, single point update]
 categories:
 - [templates, data structure]
-keywords:
 description: 树状数组（Fenwick Tree），也称为二进制索引树（Binary Indexed Tree），是一种用于高效处理动态数组前缀和查询及单点更新的数据结构。
-top_img:
-comments:
-cover:
-toc:
-toc_number:
-toc_style_simple:
-copyright:
-copyright_author:
-copyright_author_href:
-copyright_url:
-copyright_info:
-mathjax:
-katex:
-aplayer:
-highlight_shrink:
-aside:
-abcjs:
 ---
 # 树状数组
 树状数组（Fenwick Tree），也称为二进制索引树（Binary Indexed Tree），是一种用于高效处理动态数组前缀和查询及单点更新的数据结构。
+
+# Code
 ``` C++
 template <typename T>
 struct Fenwick {

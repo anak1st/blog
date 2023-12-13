@@ -5,29 +5,12 @@ updated: 2023-03-10 16:18:12
 tags:
 categories:
 - [templates, data structure]
-keywords:
 description: 并查集（Disjoint Set）是一种用于处理元素分组及查询两个元素是否属于同一组的数据结构。
-top_img:
-comments:
-cover:
-toc:
-toc_number:
-toc_style_simple:
-copyright:
-copyright_author:
-copyright_author_href:
-copyright_url:
-copyright_info:
-mathjax:
-katex:
-aplayer:
-highlight_shrink:
-aside:
-abcjs:
 ---
 # 并查集
 并查集（Disjoint Set）是一种用于处理元素分组及查询两个元素是否属于同一组的数据结构。
 
+# Code
 ``` C++
 struct DSU {
     int n;

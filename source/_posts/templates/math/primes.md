@@ -1,9 +1,19 @@
 ---
 title: Primes
 date: 2023-03-10 16:18:12
+updated: 2023-03-10 16:18:12
+tags:
 categories:
-- [templates, number theory]
+- [templates, math]
+description: 线性筛，也称为埃拉托斯特尼筛法（Sieve of Eratosthenes），是一种用于求解素数的算法。
+mathjax: true
 ---
+
+# 线性筛
+线性筛，也称为埃拉托斯特尼筛法（Sieve of Eratosthenes），是一种用于求解素数的算法。  
+复杂度 $O(nlog^2{n})$
+
+# Code
 
 ``` C++
 constexpr int N = 1e7;
