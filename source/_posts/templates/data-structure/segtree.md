@@ -6,9 +6,11 @@ tags: [range quary, single point update]
 categories:
 - [templates, data structure]
 description: 线段树（Segment Tree）是一种用于解决区间查询问题的数据结构。它可以高效地执行区间修改和查询操作。
+mathjax: true
 ---
 # 线段树
 线段树（Segment Tree）是一种用于解决区间查询问题的数据结构。它可以高效地执行区间修改和查询操作。
+支持区间查询 ($Ologn$) 和单点修改 ($Ologn$)
 
 # Code
 ``` C++

@@ -6,9 +6,11 @@ tags: [range quary, single point update]
 categories:
 - [templates, data structure]
 description: 树状数组（Fenwick Tree），也称为二进制索引树（Binary Indexed Tree），是一种用于高效处理动态数组前缀和查询及单点更新的数据结构。
+mathjax: true
 ---
 # 树状数组
 树状数组（Fenwick Tree），也称为二进制索引树（Binary Indexed Tree），是一种用于高效处理动态数组前缀和查询及单点更新的数据结构。
+支持区间查询 ($Ologn$) 和单点修改 ($Ologn$)
 
 # Code
 ``` C++

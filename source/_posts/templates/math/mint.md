@@ -5,10 +5,11 @@ updated: 2023-03-10 16:18:12
 tags:
 categories:
 - [templates, math]
-description: 自动取模
+description: 自动取模，包含逆元和快速幂
 ---
 
 # 自动取模
+自动取模，包含逆元和快速幂
 
 # Code
 

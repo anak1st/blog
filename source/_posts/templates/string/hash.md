@@ -5,8 +5,11 @@ updated: 2023-03-10 16:18:12
 tags:
 categories:
 - [templates, string]
-description: An impl of String Hash
+description: 双模哈希（Double Hashing）是一种解决哈希冲突的方法，它通过使用两个哈希函数来确定冲突时的下一个可用位置。
 ---
+
+# 双模哈希
+双模哈希（Double Hashing）是一种解决哈希冲突的方法，它通过使用两个哈希函数来确定冲突时的下一个可用位置。
 
 # #includes
 - [templates/Math/Number/Mint.hpp](/blog/templates/math/mint/)
