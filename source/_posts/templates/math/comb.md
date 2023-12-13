@@ -12,7 +12,7 @@ description: 组合数（取模），包含 lucas定理，第二类斯特林数�
 组合数（取模），包含 lucas定理，第二类斯特林数，贝尔数，康托展开
 
 # #includes
-- [templates/Math/Number/Mint.hpp](/templates/math/mint/)
+- [templates/Math/Number/Mint.hpp](/blog/templates/math/mint/)
 
 # Code
 ``` C++

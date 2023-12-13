@@ -9,7 +9,7 @@ description: An impl of String Hash
 ---
 
 # #includes
-- [templates/Math/Number/Mint.hpp](/templates/math/mint/)
+- [templates/Math/Number/Mint.hpp](/blog/templates/math/mint/)
 
 # Code
 
