@@ -5,7 +5,7 @@ updated:
 tags:
 categories:
 - [config]
-description:
+description: PowerShell 配置，包含 oh-my-posh, starship, conda, msys2, proxy
 mathjax:
 ---
 
@@ -38,7 +38,12 @@ function Start-Conda {
 }
 
 function Add-Msys2Path {
-    $msys2Path = "C:\msys2\usr\bin"
-    $Env:Path += ";$msys2Path"
+    $msys2Path = "C:\msys64\usr\bin"
+    if (Test-Path $msys2Path) {
+        $Env:Path += ";$msys2Path"
+        Write-Output "Added $msys2Path to PATH"
+    } else {
+        Write-Output "$msys2Path not found"
+    }
 }
 ```
