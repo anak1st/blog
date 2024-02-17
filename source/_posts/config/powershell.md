@@ -46,4 +46,11 @@ function Add-Msys2Path {
         Write-Output "$msys2Path not found"
     }
 }
+
+function Start-MSVC_x64 {
+    $VSPath = "C:\Program Files\Microsoft Visual Studio\2022\Community"
+    import-Module "$VSPath\Common7\Tools\Microsoft.VisualStudio.DevShell.dll"
+    Enter-VsDevShell -VsInstallPath $VSPath -SkipAutomaticLocation -DevCmdArguments "-arch=x64 -host_arch=x64"
+    cl
+}
 ```
